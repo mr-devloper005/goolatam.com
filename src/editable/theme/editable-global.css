@@ -15,6 +15,7 @@ body {
   background-color: var(--slot4-page-bg) !important;
   color: var(--slot4-page-text) !important;
   background-image: var(--slot4-body-gradient) !important;
+  overflow-x: auto;
 }
 
 ::selection {
@@ -41,4 +42,73 @@ body {
 
 .article-content a {
   color: var(--slot4-accent-fill);
+}
+
+.editable-page {
+  background: var(--slot4-page-bg);
+  color: var(--slot4-page-text);
+}
+
+.editable-ink {
+  color: var(--slot4-page-text);
+}
+
+.editable-paper {
+  background: var(--slot4-surface-bg);
+  border: 1px solid var(--editable-border);
+}
+
+.editable-green {
+  background: var(--slot4-dark-bg);
+  color: var(--slot4-dark-text);
+}
+
+.editable-copper {
+  color: var(--slot4-accent);
+}
+
+.editable-container {
+  width: min(100% - 2rem, var(--editable-container, 1180px));
+  margin-inline: auto;
+}
+
+.editable-horizontal-strip {
+  display: flex;
+  gap: clamp(2rem, 5vw, 5rem);
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: clamp(1rem, 4vw, 4rem);
+  padding-inline: clamp(1rem, 4vw, 4rem);
+  scrollbar-width: thin;
+}
+
+.editable-horizontal-strip > * {
+  scroll-snap-align: start;
+}
+
+.editable-kicker {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.editable-serif {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.editable-field,
+.editable-field textarea,
+.editable-field input {
+  color: #123524;
+}
+
+.article-content {
+  color: color-mix(in oklab, var(--slot4-page-text) 86%, #000);
+}
+
+.article-content p {
+  margin-block: 1.15rem;
 }
