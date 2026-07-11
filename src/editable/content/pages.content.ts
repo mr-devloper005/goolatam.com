@@ -52,26 +52,26 @@ export const pagesContent = {
     },
   },
   about: {
-    badge: 'Our Story',
-    title: 'A calmer, clearer way to explore content.',
-    description: `${slot4BrandConfig.siteName} is built to make long-form articles, editorial discovery, and thoughtful publishing feel like one unified experience.`,
+    badge: 'The journal behind the stories',
+    title: 'Independent ideas deserve room to unfold.',
+    description: `${slot4BrandConfig.siteName} is an independent editorial journal for curious readers, clear thinkers, and writers with something useful to say.`,
     paragraphs: [
-      'Instead of splitting ideas into noisy grids, the site keeps article discovery deliberate, visual, and easy to follow.',
-      'Readers can move from a headline to a full piece, then into related articles, search results, or contributor pages without losing context.',
-      'For contributors, the publishing flow stays simple: create an account, prepare the article, and keep the focus on the writing.',
+      'We publish essays, explainers, opinions, interviews, and visual stories that reward attention instead of competing for it.',
+      'Every page is shaped around the reading journey: discover a strong headline, settle into the full story, then follow the ideas that connect to it.',
+      'Writers get a straightforward place to contribute, while readers get an archive that feels considered, human, and easy to explore.',
     ],
     values: [
       {
-        title: 'Reading-first experience',
-        description: 'We prioritize clarity, pacing, and structure so people can read, browse, and discover without noise.',
+        title: 'Clarity over noise',
+        description: 'Thoughtful hierarchy, generous pacing, and focused pages keep the story at the center.',
       },
       {
-        title: 'Connected content surfaces',
-        description: 'Articles, topics, categories, and related reads stay connected so discovery feels natural across the site.',
+        title: 'Ideas in context',
+        description: 'Topics, authors, and related reads remain connected so every article can lead somewhere meaningful.',
       },
       {
-        title: 'Simple and trustworthy',
-        description: 'We focus on clean navigation and clear page structure to help visitors find useful content faster.',
+        title: 'Independent by design',
+        description: 'A welcoming publishing path gives distinct voices space to share useful, original work.',
       },
     ],
   },

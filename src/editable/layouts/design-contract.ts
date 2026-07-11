@@ -18,7 +18,7 @@ export const editableRootStyle = {
   '--slot4-lavender': '#123524',
   '--slot4-gray': '#ead6c8',
   '--slot4-body-gradient': 'linear-gradient(90deg, #0e3424 0%, #0e3424 14%, #ead6c8 14%, #ead6c8 100%)',
-  '--editable-container': '1180px',
+  '--editable-container': '1600px',
   '--editable-border': 'rgba(179,106,69,0.32)',
 } as CSSProperties
 

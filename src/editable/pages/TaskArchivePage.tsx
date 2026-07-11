@@ -87,7 +87,7 @@ export function TaskArchiveView({ task, posts, pagination, category, basePath }:
   const label = taskConfig?.label || task
   const deck = taskDeck[task]
   const Icon = deck.icon
-  const archiveVars = { '--archive-bg': '#ead6c8', '--archive-text': '#123524', '--archive-surface': '#f2dfd2', '--archive-accent': '#b36a45', '--editable-border': 'rgba(179,106,69,0.35)', '--editable-container': '1180px' } as CSSProperties
+  const archiveVars = { '--archive-bg': '#ead6c8', '--archive-text': '#123524', '--archive-surface': '#f2dfd2', '--archive-accent': '#b36a45', '--editable-border': 'rgba(179,106,69,0.35)', '--editable-container': '1600px' } as CSSProperties
   const categoryLabel = category === 'all' ? 'All categories' : CATEGORY_OPTIONS.find((item) => item.slug === category)?.name || category
 
   return (
@@ -155,7 +155,7 @@ function ArticleArchiveCard({ post, href, index }: { post: SitePost; href: strin
   const image = getImage(post)
   const category = getCategory(post, 'Article')
   return (
-    <Link href={href} className="group block w-[min(78vw,390px)] shrink-0 border-r border-[var(--editable-border)] bg-[var(--archive-surface)] p-5 transition hover:bg-white/70">
+    <Link href={href} className="group block w-[min(84vw,480px)] shrink-0 border-r border-[var(--editable-border)] bg-[var(--archive-surface)] p-6 transition hover:bg-white/70">
       <div className="relative aspect-[4/5] overflow-hidden bg-black/5">
         <img src={image} alt="" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
         <span className="absolute left-4 top-4 bg-white px-3 py-1 text-[10px] font-black uppercase tracking-[0.2em]">{category}</span>

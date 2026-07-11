@@ -9,7 +9,7 @@ import { useEditableLocalAuthSession } from '@/editable/components/EditableLocal
 import { slot4BrandConfig } from '@/editable/theme/brand.config'
 
 export function EditableFooter() {
-  const footerVars = { '--editable-footer-bg': '#0e3424', '--editable-footer-text': '#f2dfd2', '--editable-border': 'rgba(179,106,69,0.38)', '--editable-container': '1180px' } as CSSProperties
+  const footerVars = { '--editable-footer-bg': '#0e3424', '--editable-footer-text': '#f2dfd2', '--editable-border': 'rgba(179,106,69,0.38)', '--editable-container': '1600px' } as CSSProperties
   const taskLinks = SITE_CONFIG.tasks.filter((task) => task.enabled)
   const year = new Date().getFullYear()
   const { session, logout } = useEditableLocalAuthSession()

@@ -22,7 +22,7 @@ function taskLabel(task: TaskKey) {
 function ArticlePanel({ post, href, index, tone = 'dark' }: { post: SitePost; href: string; index: number; tone?: 'dark' | 'paper' }) {
   const dark = tone === 'dark'
   return (
-    <Link href={href} className={`group grid min-h-[70vh] w-[min(82vw,560px)] shrink-0 content-start border-r border-[var(--editable-border)] px-6 py-10 transition hover:bg-black/[0.03] sm:px-10 ${dark ? 'editable-green' : 'bg-[var(--slot4-surface-bg)] text-[var(--slot4-page-text)]'}`}>
+    <Link href={href} className={`group grid min-h-[70vh] w-[min(88vw,720px)] shrink-0 content-start border-r border-[var(--editable-border)] px-6 py-10 transition hover:bg-black/[0.03] sm:px-10 ${dark ? 'editable-green' : 'bg-[var(--slot4-surface-bg)] text-[var(--slot4-page-text)]'}`}>
       <div className="relative mx-auto aspect-[4/5] w-full max-w-[410px] overflow-hidden bg-[var(--slot4-media-bg)]">
         <img src={getEditablePostImage(post)} alt={post.title} className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
       </div>
@@ -40,7 +40,7 @@ function ArticlePanel({ post, href, index, tone = 'dark' }: { post: SitePost; hr
 
 function SmallIndex({ post, href, index }: { post: SitePost; href: string; index: number }) {
   return (
-    <Link href={href} className="group block w-[280px] shrink-0 border-l border-[var(--editable-border)] px-5 py-6 transition hover:bg-white/35">
+    <Link href={href} className="group block w-[min(82vw,380px)] shrink-0 border-l border-[var(--editable-border)] px-6 py-8 transition hover:bg-white/35">
       <p className="editable-kicker text-[var(--slot4-accent)]">Note {String(index + 1).padStart(2, '0')}</p>
       <h3 className="editable-serif mt-3 text-2xl leading-tight text-[var(--slot4-page-text)]">{post.title}</h3>
       <p className="mt-3 line-clamp-3 text-sm leading-6 text-[var(--slot4-muted-text)]">{getEditableExcerpt(post, 110)}</p>
@@ -57,7 +57,7 @@ export function EditableHomeHero({ primaryTask, primaryRoute, posts }: HomeSecti
   return (
     <section className="editable-page overflow-hidden">
       <div className="editable-horizontal-strip min-h-[calc(100vh-78px)] items-stretch px-0">
-        <div className="grid w-[min(92vw,1280px)] shrink-0 grid-cols-1 bg-[var(--slot4-surface-bg)] md:grid-cols-[130px_minmax(0,1fr)_minmax(360px,0.9fr)]">
+        <div className="grid w-[min(96vw,1600px)] shrink-0 grid-cols-1 bg-[var(--slot4-surface-bg)] md:grid-cols-[130px_minmax(0,1.15fr)_minmax(420px,0.85fr)]">
           <div className="hidden items-center justify-center border-r border-[var(--editable-border)] bg-white md:flex">
             <span className="editable-serif rotate-180 text-[clamp(5rem,11vw,11rem)] leading-none text-[#b9a487] [writing-mode:vertical-rl]">{slot4BrandConfig.siteName}</span>
           </div>
