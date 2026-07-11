@@ -8,6 +8,7 @@ import { getTaskConfig, SITE_CONFIG, type TaskKey } from '@/lib/site-config'
 import type { SitePost } from '@/lib/site-connector'
 import { EditableSiteShell } from '@/editable/shell/EditableSiteShell'
 import { slot4BrandConfig } from '@/editable/theme/brand.config'
+import Ads from '@/lib/ads/ads'
 
 export const revalidate = 3
 
@@ -105,7 +106,7 @@ const mapSrcFor = (post: SitePost) => {
 }
 
 export function TaskDetailView({ task, post, related, comments = [] }: { task: TaskKey; post: SitePost; related: SitePost[]; comments?: Array<{ id: string; name: string; comment: string; createdAt: string }> }) {
-  const detailVars = { '--detail-bg': '#ead6c8', '--detail-text': '#123524', '--detail-surface': '#f2dfd2', '--detail-accent': '#b36a45', '--editable-border': 'rgba(179,106,69,0.35)', '--editable-container': '1180px' } as CSSProperties
+  const detailVars = { '--detail-bg': 'var(--slot4-page-bg)', '--detail-text': 'var(--slot4-page-text)', '--detail-surface': 'var(--slot4-surface-bg)', '--detail-accent': 'var(--slot4-accent)', '--editable-container': '1600px' } as CSSProperties
 
   return (
     <EditableSiteShell>
@@ -152,6 +153,11 @@ function ArticleDetail({ post, related, comments }: { post: SitePost; related: S
           ) : null}
           {related.length ? <div className="mt-6"><RelatedPanel task="article" post={post} related={related} compact /></div> : null}
         </aside>
+      </div>
+      <div className="border-y border-[var(--editable-border)] bg-[var(--detail-surface)]">
+        <div className="mx-auto max-w-6xl px-4 py-8">
+          <Ads slot="feature" showLabel className="mx-auto w-full" />
+        </div>
       </div>
       {related.length ? (
         <div className="border-t border-[var(--editable-border)] bg-[var(--detail-text)] py-10 text-[var(--detail-bg)]">
@@ -424,7 +430,7 @@ function RelatedPanel({ task, post, related, compact = false }: { task: TaskKey;
 function RelatedCard({ task, post }: { task: TaskKey; post: SitePost }) {
   const image = getImages(post)[0]
   return (
-    <Link href={buildPostUrl(task, post.slug)} className="group flex w-[min(78vw,340px)] shrink-0 gap-3 border border-[var(--editable-border)] bg-white p-3 text-[var(--detail-text)] transition hover:-translate-y-0.5 hover:shadow-lg">
+    <Link href={buildPostUrl(task, post.slug)} className="group flex w-[min(82vw,420px)] shrink-0 gap-4 border border-[var(--editable-border)] bg-white p-4 text-[var(--detail-text)] transition hover:-translate-y-0.5 hover:shadow-lg">
       {image && task !== 'sbm' ? <img src={image} alt="" className="h-20 w-20 shrink-0 object-cover" /> : <div className="flex h-20 w-20 shrink-0 items-center justify-center bg-[var(--detail-bg)]"><FileText className="h-6 w-6 opacity-45" /></div>}
       <div className="min-w-0">
         <h3 className="line-clamp-3 text-sm font-black leading-tight tracking-[-0.03em]">{post.title}</h3>

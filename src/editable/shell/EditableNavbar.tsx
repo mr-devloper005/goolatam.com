@@ -14,7 +14,7 @@ export function EditableNavbar() {
   const pathname = usePathname()
   const { session, logout } = useEditableLocalAuthSession()
   const brandName = slot4BrandConfig.siteName
-  const navVars = { '--editable-nav-bg': '#ead6c8', '--editable-nav-text': '#123524', '--editable-nav-active': '#0e3424', '--editable-nav-active-text': '#f2dfd2', '--editable-cta-bg': '#0e3424', '--editable-cta-text': '#f2dfd2', '--editable-search-bg': '#f2dfd2', '--editable-border': 'rgba(179,106,69,0.35)', '--editable-container': '1180px' } as CSSProperties
+  const navVars = { '--editable-nav-bg': '#ead6c8', '--editable-nav-text': '#123524', '--editable-nav-active': '#0e3424', '--editable-nav-active-text': '#f2dfd2', '--editable-cta-bg': '#0e3424', '--editable-cta-text': '#f2dfd2', '--editable-search-bg': '#f2dfd2', '--editable-border': 'rgba(179,106,69,0.35)', '--editable-container': '1600px' } as CSSProperties
   const navItems = useMemo(
     () => SITE_CONFIG.tasks.filter((task) => task.enabled).map((task) => ({ label: task.label, href: task.route })),
     []
