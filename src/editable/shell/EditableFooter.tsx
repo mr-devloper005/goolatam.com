@@ -19,9 +19,7 @@ export function EditableFooter() {
       <div className="mx-auto grid max-w-[var(--editable-container)] gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.15fr_0.85fr_0.85fr] lg:px-8">
         <div>
           <Link href="/" className="inline-flex items-center gap-3">
-            <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-[var(--editable-border)] bg-[#ead6c8]">
-              <img src="/favicon.png?v=20260413" alt={slot4BrandConfig.siteName} className="h-9 w-9 object-contain" />
-            </span>
+            <img src="/favicon.png?v=20260413" alt={slot4BrandConfig.siteName} className="h-20 w-20 object-contain" />
             <span className="editable-serif text-2xl font-normal">{slot4BrandConfig.siteName}</span>
           </Link>
           <p className="mt-4 max-w-md text-sm leading-7 text-[#ead6c8]/72">{globalContent.footer?.description || SITE_CONFIG.description}</p>
